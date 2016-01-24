@@ -7,6 +7,5 @@ sudo apt-get -y install docker-engine
 echo export http_proxy="http://web-proxy.il.hpecorp.net:8080/" >> /etc/default/docker
 echo export https_proxy="http://web-proxy.il.hpecorp.net:8080/" >> /etc/default/docker
 sudo service docker restart
-#Mount \\mydastr01.isr.hp.com\products
-sudo apt-get install cifs-utils
-sudo mkdir /media/windowsshare
+#Mount \\mydastr01.isr.hp.com is mapped to /NAS_ROOT
+#To See mounts see file /etc/fstab 
