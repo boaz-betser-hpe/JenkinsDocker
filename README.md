@@ -11,14 +11,18 @@ From machine in a desired folder e.g. /opt/docker run command:
 git clone https://github.com/boaz-betser-hpe/JenkinsDocker
 
 cd JenkinsDocker
+
 chmod +x *.sh
+
 ./installDocker.sh
+
 ./runJenkins.sh
 
-Check for running containers:
+To check for running containers run:
+
 docker ps -a
 
-Stop all containers:
+To stop all containers run:
 docker stop $(docker ps -a -q)
 
 Delete all stopped containers:
