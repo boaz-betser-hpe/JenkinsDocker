@@ -16,5 +16,5 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN apt-get install -y npm
 RUN npm install -g grunt-cli@0.1.11
 RUN npm install -g bower@1.3.8
-USER jenkins
+#USER jenkins
 # drop back to the regular jenkins user - good practice
