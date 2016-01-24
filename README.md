@@ -10,8 +10,10 @@ From machine in a desired folder e.g. /opt/docker run command:
 
 git clone https://github.com/boaz-betser-hpe/JenkinsDocker
 
+cd JenkinsDocker
+chmod +x *.sh
 ./installDocker.sh
-
+./runJenkins.sh
 
 Check for running containers:
 docker ps -a
