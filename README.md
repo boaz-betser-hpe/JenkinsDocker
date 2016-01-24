@@ -27,5 +27,5 @@ Install new Ubuntu image 64 bit version 14.04 using Ace
 ##To Builde new Docker Container run:
 *docker build .*
 
-##To commit build run:
-docker commit
+##To Build and Commit Docke run:
+./buildAndCommitDocker.sh
