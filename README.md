@@ -3,9 +3,13 @@ Description:
 Create a Jenkins Docker with Plugins.
 
 To install Docker:
+
 Install new Ubuntu image 64 bit version 14.04 using Ace
+
 From machine in a desired folder e.g. /opt/docker run command:
+
 git clone https://github.com/boaz-betser-hpe/JenkinsDocker
+
 ./installDocker.sh
 
 
