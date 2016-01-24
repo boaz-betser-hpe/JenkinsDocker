@@ -5,26 +5,23 @@ Create a Jenkins Docker with Plugins.
 ##To install Docker:
 Install new Ubuntu image 64 bit version 14.04 using Ace
 
-###From machine in a desired folder e.g. /opt/docker run command:
-git clone https://github.com/boaz-betser-hpe/JenkinsDocker
+###From machine in a desired folder e.g. /opt/docker run commands:
+*git clone https://github.com/boaz-betser-hpe/JenkinsDocker*
+*cd JenkinsDocker*
+*chmod +x *.sh*
+*./installDocker.sh*
+###To Run Jenkins container run the following command from same folder:
+*./runJenkins.sh*
 
-cd JenkinsDocker
+###To check for running containers run:
+*docker ps -a*
 
-chmod +x *.sh
+###To stop and delete all containers run:
+*./stopDeleteAllContainers.sh*
 
-./installDocker.sh
-
-./runJenkins.sh
-
-##To check for running containers run:
-docker ps -a
-
-##To stop and delete all containers run:
-./stopDeleteAllContainers.sh
-
-#Building docker image
+#Building new docker image
 ##To Builde new Docker Container run:
-docker build .
+*docker build .*
 
 ##To commit build run:
 docker commit
