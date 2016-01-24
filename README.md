@@ -14,8 +14,11 @@ Install new Ubuntu image 64 bit version 14.04 using Ace
 
 *./installDocker.sh*
 
-###To Run Jenkins container run the following command from same folder:
+###To Run Jenkins container first time run the following command from same folder:
 *./runJenkins.sh*
+
+###To start container you allready created run:
+*./startJenkins.sh*
 
 ###To check for running containers run:
 *docker ps -a*
