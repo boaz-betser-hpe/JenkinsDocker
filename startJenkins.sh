@@ -1,2 +1,2 @@
 #!/bin/sh
-docker start appPulseJenkins
+docker start AppPulseJenkins
