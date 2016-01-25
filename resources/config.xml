@@ -13,6 +13,11 @@
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <jdks>
     <jdk>
+      <name>JDK 1.7.0_51</name>
+      <home>/var/jdk/1.7.0_51/linux64</home>
+      <properties/>
+    </jdk>
+    <jdk>
       <name>JDK 1.8.0_51</name>
       <home>/var/jdk/1.8.0_51/linux64</home>
       <properties/>
