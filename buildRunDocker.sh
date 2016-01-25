@@ -4,6 +4,8 @@ version=1.0
 logFile=build.log
 mkdir -p resources/SUN/JDK/1.8.0_51/linux64
 cp -R /NAS_ROOT/products/TPS/TPS/Latest/SUN/JDK/1.8.0_51/linux64 resources/SUN/JDK/1.8.0_51/linux64
+mkdir -p resources/SUN/JDK/1.7.0_51/linux64
+cp -R /NAS_ROOT/products/TPS/TPS/Latest/SUN/JDK/1.7.0_51/linux64 resources/SUN/JDK/1.8.0_51/linux64
 mkdir -p resources/Apache/maven/3.0.3/multi-platform
 cp -R /NAS_ROOT/products/TPS/TPS/Latest/Apache/maven/3.0.3/multi-platform resources/Apache/maven/3.0.3/multi-platform
 docker build . | tee $logFile
