@@ -17,6 +17,7 @@ COPY resources/proxy.xml /var/jenkins_home/proxy.xml
 COPY resources/config.xml /var/jenkins_home/config.xml
 COPY resources/hudson.tasks.Maven.xml /var/jenkins_home/hudson.tasks.Maven.xml
 COPY resources/jobs /var/jenkins_home/jobs
+COPY resources/SUN/JDK/1.7.0_51/linux64 /var/jdk/1.7.0_51
 COPY resources/SUN/JDK/1.8.0_51/linux64 /var/jdk/1.8.0_51
 COPY resources/Apache/maven/3.0.3/multi-platform /var/maven/3.0.3
 COPY resources/plugins /var/jenkins_home/plugins
