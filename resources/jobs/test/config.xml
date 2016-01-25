@@ -33,7 +33,7 @@
     <groupId>com.hp.apmapps</groupId>
     <artifactId>apmappsConfigurationPom</artifactId>
   </rootModule>
-  <goals>clean install</goals>
+  <goals>clean install -P ExtractSuiteVer,GruntBuild,SkipUiTests,ExtractBowerNode,PackageAppsComponent -DskipTests</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
