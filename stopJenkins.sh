@@ -1,2 +1,2 @@
 #!/bin/sh
-docker stop appPulseJenkins
+docker stop AppPulseJenkins
