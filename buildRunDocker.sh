@@ -11,4 +11,4 @@ cp -R /NAS_ROOT/products/TPS/TPS/Latest/Apache/maven/3.0.3/multi-platform resour
 docker build . | tee $logFile
 containerName=`cat $logFile|grep "Successfully built"|gawk '{ print $3 }'`
 echo docker commit $containerName  $imageName:$version
-docker run --name appPulseJenkins -p 80:8080 -p 50000:50000 $containerName
+docker run --name $imageName -p 80:8080 -p 50000:50000 $containerName
