@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo docker exec -it appPulseJenkins bash
+sudo docker exec -it AppPulseJenkins bash
