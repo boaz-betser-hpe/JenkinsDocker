@@ -7,6 +7,7 @@ COPY resources/config.xml /var/jenkins_home/config.xml
 COPY resources/jobs /var/jenkins_home/jobs
 COPY resources/SUN/JDK/1.8.0_51/linux64 /var/jdk/1.8.0_51
 COPY resources/Apache/maven/3.0.3/multi-platform /var/maven/3.0.3
+COPY resources/plugins /var/jenkins_home/plugins
 #RUN chown -R jenkins:jenkins /var/jenkins_home
 USER root
 RUN apt-get update
