@@ -12,6 +12,7 @@ RUN apt-get install -y npm
 RUN npm install -g grunt-cli@0.1.11
 RUN npm install -g bower@1.3.8
 RUN apt-get install -y ruby-dev
+RUN apt-get install -y ruby
 RUN gem install compass
 
 #Install Maven 3rd party
