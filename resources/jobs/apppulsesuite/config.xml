@@ -25,7 +25,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
+  <jdk>JDK 1.7.0_51</jdk>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
