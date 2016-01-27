@@ -1,7 +1,7 @@
 #!/bin/sh
-echo "Usage: startDocker.sh externalPort <NamePrefixi>"
+echo "Usage: startDocker.sh externalPort"
 externalPort=$1
-imageName="$2""AppPulseJenkins"
+imageName="AppPulseJenkins$externalPort"
 version=1.0
 logFile=build.log
 JENKINS_INTERNAL_HTTP_PORT=9999
