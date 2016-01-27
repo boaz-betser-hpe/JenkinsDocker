@@ -1,6 +1,11 @@
 #!/bin/sh
 echo "Usage: startJenkins.sh <extrenalPort>"
-imageName="AppPulseJenkins$1
+externalPort=$1
+if [ "$externalPort" = "" ]
+    then
+    externalPort=80
+fi
+imageName="AppPulseJenkins$externalPort
 cmd="docker start $imageName"
 echo $cmd
 `$cmd`
