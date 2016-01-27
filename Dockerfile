@@ -19,6 +19,7 @@ RUN gem install compass
 COPY resources/proxy.xml /var/jenkins_home/proxy.xml
 COPY resources/config.xml /var/jenkins_home/config.xml
 COPY resources/hudson.tasks.Maven.xml /var/jenkins_home/hudson.tasks.Maven.xml
+COPY resources/hudson.maven.MavenModuleSet.xml /var/jenkins_home/hudson.maven.MavenModuleSet.xml
 COPY resources/jobs /var/jenkins_home/jobs
 COPY resources/SUN/JDK/1.7.0_51/linux64 /var/jdk/1.7.0_51
 COPY resources/SUN/JDK/1.8.0_51/linux64 /var/jdk/1.8.0_51
