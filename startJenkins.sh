@@ -5,7 +5,7 @@ if [ "$externalPort" = "" ]
     then
     externalPort=80
 fi
-imageName="AppPulseJenkins$externalPort
+imageName="AppPulseJenkins$externalPort"
 cmd="docker start $imageName"
 echo $cmd
 `$cmd`
