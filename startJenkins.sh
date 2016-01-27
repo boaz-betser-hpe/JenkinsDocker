@@ -1,6 +1,6 @@
 #!/bin/sh
-echo "Usage: startDocker.sh externalPort <NamePrefixi>"
+echo "Usage: startJenkins.sh <NamePrefixi>"
 imageName="$1""AppPulseJenkins"
-cmd="docker start $imageName 
+cmd="docker start $imageName"
 echo $cmd
 `$cmd`
