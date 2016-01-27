@@ -1,2 +1,7 @@
 #!/bin/sh
-sudo docker exec -it AppPulseJenkins$1 bash
+externalPort=$1
+if [ "$externalPort" = "" ]
+    then
+    externalPort=80
+fi
+sudo docker exec -it AppPulseJenkins$externalPort bash
