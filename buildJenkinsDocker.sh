@@ -12,4 +12,4 @@ docker build . | tee $logFile
 containerName=`cat $logFile|grep "Successfully built"|gawk '{ print $3 }'`
 echo docker commit $containerName  $imageName:$version
 #docker run -h mydev.devdomain.com --name $imageName -p 80:8080 -p 50000:50000 $containerName
-./startJenkins.sh 80
+#./startJenkins.sh 80
