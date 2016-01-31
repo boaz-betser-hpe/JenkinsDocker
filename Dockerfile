@@ -13,7 +13,8 @@ RUN npm install -g grunt-cli@0.1.11
 RUN npm install -g bower@1.3.8
 RUN apt-get install -y ruby-dev
 RUN apt-get install -y ruby
-RUN gem install compass:0.12.2
+RUN gem install compass
+#RUN gem install compass:0.12.2
 
 #Install Maven 3rd party
 COPY resources/proxy.xml /var/jenkins_home/proxy.xml
