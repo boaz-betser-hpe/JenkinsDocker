@@ -8,4 +8,4 @@ fi
 imageName="AppPulseJenkins$externalPort"
 cmd="docker start $imageName"
 echo $cmd
-`$cmd`
+$cmd

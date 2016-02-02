@@ -8,4 +8,4 @@ fi
 imageName="AppPulseJenkins$externalPort"
 cmd="docker stop $imageName"
 echo $cmd
-`$cmd`
+$cmd
