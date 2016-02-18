@@ -15,6 +15,8 @@ RUN apt-get install -y ruby-dev
 RUN apt-get install -y ruby
 RUN gem install compass
 #RUN gem install compass:0.12.2
+#Edit hosts file
+RUN cat /etc/hosts |sed 's/localhost/localhost mydev.devdomain.com/'>/etc/hosts
 
 #Install Maven 3rd party
 COPY resources/proxy.xml /var/jenkins_home/proxy.xml
