@@ -2,6 +2,7 @@ FROM jenkins
 # if we want to install via apt
 ENV http_proxy="http://web-proxy.il.hpecorp.net:8080/"
 ENV https_proxy="http://web-proxy.il.hpecorp.net:8080/"
+ENV PS1 'DockerJenkins# '
 USER root
 #Install 3rd party
 RUN apt-get update
