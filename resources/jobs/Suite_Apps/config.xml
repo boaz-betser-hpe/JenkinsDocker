@@ -9,7 +9,6 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://mydtbld0090g.hpeswlab.net/scm/ap/apppulsesuite.git</url>
-        <credentialsId>95ba83a8-2dd6-418a-83de-9c200a633177</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -56,7 +55,7 @@
           <reportDir>main/test/testStories/target/jbehave</reportDir>
           <reportFiles>view/reports.html</reportFiles>
           <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
-          <keepAll>false</keepAll>
+          <keepAll>true</keepAll>
           <allowMissing>false</allowMissing>
         </htmlpublisher.HtmlPublisherTarget>
       </reportTargets>
