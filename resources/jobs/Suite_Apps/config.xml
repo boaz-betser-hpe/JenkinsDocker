@@ -13,8 +13,8 @@
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>skipTests</name>
-          <description>true</description>
-          <defaultValue>true</defaultValue>
+          <description>skipTests</description>
+          <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
