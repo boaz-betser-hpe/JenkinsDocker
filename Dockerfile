@@ -2,7 +2,6 @@ FROM jenkins
 # if we want to install via apt
 ENV http_proxy="http://web-proxy.il.hpecorp.net:8080/"
 ENV https_proxy="http://web-proxy.il.hpecorp.net:8080/"
-ENV PS1 'DockerJenkins# '
 USER root
 #Install 3rd party
 RUN apt-get update
@@ -18,7 +17,8 @@ RUN gem install compass
 #RUN gem install compass:0.12.2
 #Edit hosts file
 #RUN cat /etc/hosts |sed 's/localhost/localhost mydev.devdomain.com/'>/etc/hosts
-RUN cat /etc/bash.bashrc |sed "s/PS1='/PS1='Docker_/">/etc/bash.bashrc 
+#RUN cat /etc/bash.bashrc |sed "s/PS1='/PS1='Docker_/">/etc/bash.bashrc 
+RUN echo "" > /etc/bash.bashrc 
 
 #Install Maven 3rd party
 COPY resources/proxy.xml /var/jenkins_home/proxy.xml
