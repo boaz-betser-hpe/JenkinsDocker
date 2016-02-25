@@ -33,7 +33,7 @@
     <groupId>com.hp.apm.neptune.purple_server</groupId>
     <artifactId>apmappsConfigurationPom</artifactId>
   </rootModule>
-  <goals>clean install -P GruntBuild,SkipUiTests,ExtractBowerNode,ApSuiteRunner,TestAppsUiStories,PackageSuiteComponents -DremoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DpageTestRemoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=1 -DnumberOfConcurrentStories=1 -DenvironmentUT=jenkins_slave.json -DloginURL=http://myd-vm21746.hpswlabs.adapps.hp.com:8080/apmappsSaasMock/login.html -DapmAppsRestURL=http://${HOSTNAME}:80${externalPort}/apmappsDiag/rest/ -DmsgRestURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/rest/saasportalmock/</goals>
+  <goals>clean install -P GruntBuild,SkipUiTests,ExtractBowerNode,ApSuiteRunner,TestAppsUiStories,PackageSuiteComponents -DremoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DpageTestRemoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=1 -DnumberOfConcurrentStories=1 -DenvironmentUT=jenkins_slave.json -DloginURL=http://http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/login.html -DapmAppsRestURL=http://${HOSTNAME}:80${externalPort}/apmappsDiag/rest/ -DmsgRestURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/rest/saasportalmock/</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
@@ -49,7 +49,20 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
-  <publishers/>
+  <publishers>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.11">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>JBehave Report</reportName>
+          <reportDir>main/test/testStories/target/jbehave</reportDir>
+          <reportFiles>view/reports.html</reportFiles>
+          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
+          <keepAll>false</keepAll>
+          <allowMissing>false</allowMissing>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
+  </publishers>
   <buildWrappers>
     <EnvInjectBuildWrapper plugin="envinject@1.92.1">
       <info>
