@@ -4,22 +4,23 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.1">
-    <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <url>http://mydtbld0090g.hpeswlab.net/scm/ap/apppulsesuite.git</url>
-        <credentialsId>8f246e88-d6f1-440e-910b-d631dd1cf220</credentialsId>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
-    <branches>
-      <hudson.plugins.git.BranchSpec>
-        <name>*/dev_1.0</name>
-      </hudson.plugins.git.BranchSpec>
-    </branches>
-    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <submoduleCfg class="list"/>
-    <extensions/>
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.54">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://bsmsc.hpeswlab.net/svn/bsm-rum/venus-engine/trunk/venus-engine</remote>
+        <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>false</ignoreExternalsOption>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -29,10 +30,10 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
-    <groupId>com.hp.apsuite</groupId>
-    <artifactId>apsuiteConfigurationPom</artifactId>
+    <groupId>com.hp.apppulse.venus.engine</groupId>
+    <artifactId>rum</artifactId>
   </rootModule>
-  <goals>clean install -P GruntBuild,SkipUiTests,ExtractBowerNode,ApSuiteRunner,TestAppsUiStories,PackageSuiteComponents -DremoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DpageTestRemoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=1 -DnumberOfConcurrentStories=1 -DenvironmentUT=jenkins_slave.json -DloginURL=http://${HOSTNAME}:80${externalPort}//apmappsSaasMock/login.html -DapmAppsRestURL=http://${HOSTNAME}:80${externalPort}/apmappsDiag/rest/ -DmsgRestURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/rest/saasportalmock/ -Dapps.port=80${externalPort}</goals>
+  <goals>clean install</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
@@ -49,7 +50,14 @@
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
   <publishers/>
-  <buildWrappers/>
+  <buildWrappers>
+    <EnvInjectBuildWrapper plugin="envinject@1.92.1">
+      <info>
+        <propertiesContent>MAVEN_OPTS=-Xms512m -Xmx512m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError</propertiesContent>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+    </EnvInjectBuildWrapper>
+  </buildWrappers>
   <prebuilders/>
   <postbuilders/>
   <runPostStepsIfResult>
