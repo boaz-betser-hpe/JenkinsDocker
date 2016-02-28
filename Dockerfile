@@ -18,7 +18,7 @@ RUN gem install compass
 #Edit hosts file
 #RUN cat /etc/hosts |sed 's/localhost/localhost mydev.devdomain.com/'>/etc/hosts
 #RUN cat /etc/bash.bashrc |sed "s/PS1='/PS1='Docker_/">/etc/bash.bashrc 
-RUN echo "" > /etc/bash.bashrc 
+RUN echo "cd /var/jenkins_home" > /etc/bash.bashrc 
 
 #Install Maven 3rd party
 COPY resources/proxy.xml /var/jenkins_home/proxy.xml
