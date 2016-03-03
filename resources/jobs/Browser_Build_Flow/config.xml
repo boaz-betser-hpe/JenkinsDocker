@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.plugins.flow.BuildFlow plugin="build-flow-plugin@0.18">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>branch</name>
+          <description></description>
+          <defaultValue>master</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers/>
+  <icon/>
+  <dsl>out.println params
+branch_instrument = params.branch
+branch_ui = &quot;master&quot;
+parallel (
+    // job 1, 2 and 3 will be scheduled in parallel.
+    { build(&quot;Browser/Venus_Browser&quot;, branch: branch_ui ) },
+    //{ build(&quot;Engine&quot;) },
+    { build(&quot;Browser/Venus_Browser_Instrument&quot;, branch: branch_instrument )}
+)
+</dsl>
+  <buildNeedsWorkspace>false</buildNeedsWorkspace>
+</com.cloudbees.plugins.flow.BuildFlow>

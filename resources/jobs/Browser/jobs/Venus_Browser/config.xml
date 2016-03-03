@@ -3,13 +3,23 @@
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>branch</name>
+          <description></description>
+          <defaultValue>master</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://mydtbld0090g.hpeswlab.net/scm/mob/browserapps.git</url>
-        <credentialsId>1b8ce183-e964-43fa-88e1-3d3b891e390f</credentialsId>
+        <credentialsId>620e267b-2183-46f8-a322-d5887e875b4b</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
