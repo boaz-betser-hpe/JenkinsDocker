@@ -42,7 +42,7 @@
     <groupId>com.hp.browser</groupId>
     <artifactId>apmappsConfigurationPom</artifactId>
   </rootModule>
-  <goals>clean install -P ExtractSuiteVer,ExtractBowerNode,GruntBuild,RunAppsComponent,TestAppsUiStories -DwebdriverexTimeoutSeconds=160 -DenvironmentUT=jenkins_slave.json -DremoteWebDriverUrl=http://myd-vm11452.hpswlabs.adapps.hp.com:4444/wd/hub -Dbrowsers=chrome -Dlogback.configurationFile=logback-test-debug-file.xml -Dnode.test.port=3002 -Dwsport=3002 -DloginURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/login.html -DvisualTest=false -DpageTestRemoteWebDriverUrl=http://myd-vm11452.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=5 -DnumberOfConcurrentStories=4</goals>
+  <goals>clean install -P ExtractSuiteVer,ExtractBowerNode,GruntBuild,RunAppsComponent,TestAppsUiStories -DwebdriverexTimeoutSeconds=160 -DenvironmentUT=jenkins_slave.json -DremoteWebDriverUrl=http://myd-vm11452.hpswlabs.adapps.hp.com:4444/wd/hub -Dbrowsers=chrome -Dlogback.configurationFile=logback-test-debug-file.xml -Dnode.test.port=30${externalPort} -Dwsport=30${externalPort} -DloginURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/login.html -DvisualTest=false -DpageTestRemoteWebDriverUrl=http://myd-vm11452.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=5 -DnumberOfConcurrentStories=4</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
