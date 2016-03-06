@@ -33,7 +33,7 @@
     <groupId>com.hp.apmapps</groupId>
     <artifactId>apmappsConfigurationPom</artifactId>
   </rootModule>
-  <goals>clean install -P GruntBuild,SkipUiTests,ExtractBowerNode,ApSuiteRunner,TestAppsUiStories,PackageSuiteComponents -DremoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DpageTestRemoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=1 -DnumberOfConcurrentStories=1 -DenvironmentUT=jenkins_slave.json -DloginURL=http://myd-vm21746.hpswlabs.adapps.hp.com:8080/apmappsSaasMock/login.html -DapmAppsRestURL=http://${HOSTNAME}:80${externalPort}/apmappsDiag/rest/ -DmsgRestURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/rest/saasportalmock/ -Dnode.test.port=30${externalPort} -Dwsport=30${externalPort}</goals>
+  <goals>clean install -P ExtractSuiteVer,GruntBuild,SkipUiTests,ExtractBowerNode,ApSuiteRunner,TestAppsUiStories,PackageSuiteComponents -DremoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DpageTestRemoteWebDriverUrl=http://myd-vm01656.hpswlabs.adapps.hp.com:4444/wd/hub -DtestThreads=1 -DnumberOfConcurrentStories=1 -DenvironmentUT=jenkins_slave.json -DloginURL=http://myd-vm21746.hpswlabs.adapps.hp.com:8080/apmappsSaasMock/login.html -DapmAppsRestURL=http://${HOSTNAME}:80${externalPort}/apmappsDiag/rest/ -DmsgRestURL=http://${HOSTNAME}:80${externalPort}/apmappsSaasMock/rest/saasportalmock/ -Dnode.test.port=30${externalPort} -Dwsport=30${externalPort}</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
