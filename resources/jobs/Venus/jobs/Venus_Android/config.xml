@@ -19,7 +19,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://mydtbld0090g.hpeswlab.net/scm/mob/cm-mobile-devices.git</url>
-        <credentialsId>1b8ce183-e964-43fa-88e1-3d3b891e390f</credentialsId>
+        <credentialsId>c7eaef74-706d-408e-863b-cc3bf986ada6</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
