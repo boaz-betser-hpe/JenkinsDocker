@@ -19,7 +19,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://mydtbld0090g.hpeswlab.net/scm/mob/browserapps.git</url>
-        <credentialsId>620e267b-2183-46f8-a322-d5887e875b4b</credentialsId>
+        <credentialsId>c7eaef74-706d-408e-863b-cc3bf986ada6</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
