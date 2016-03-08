@@ -24,7 +24,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://mydtbld0090g.hpeswlab.net/scm/ap/apppulsesuite.git</url>
-        <credentialsId>f7fb3a66-44ad-467e-b4a6-10d3637648be</credentialsId>
+        <credentialsId>c7eaef74-706d-408e-863b-cc3bf986ada6</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
