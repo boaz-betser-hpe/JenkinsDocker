@@ -9,3 +9,4 @@ echo export https_proxy="http://web-proxy.il.hpecorp.net:8080/" >> /etc/default/
 sudo service docker restart
 #Mount \\mydastr01.isr.hp.com is mapped to /NAS_ROOT
 #To See mounts see file /etc/fstab 
+DOCKER_OPTS="--insecure-registry myd-vm02816.hpswlabs.adapps.hp.com:5000"
