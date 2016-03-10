@@ -1,6 +1,13 @@
 #!/bin/sh
+#To run registry run:
+#docker run -d -p 5000:5000 --name registry registry:2
+#make sure in file /etc/default/docker you have line:
+#DOCKER_OPTS="--insecure-registry <hostname>:5000"
+#if not add it and run:
+#service docker restart the try publish again
 registry=$1
 logFile=build.log
+
 if [ "$registry" = "" ]
 then
   echo "usage: command <registry host>"
